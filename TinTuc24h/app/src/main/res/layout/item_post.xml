@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_post"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp">
+        <ImageView
+            android:id="@+id/img_thumb"
+            android:src="@drawable/sample_1"
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:background="@color/colorTranparent"
+            android:padding="@dimen/_8sdp"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Real thua đậm Barca: Đại ca Ramos đập phòng thay đồ, chửi Bale - Benzema"
+                android:lines="2"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_14sdp"
+
+                />
+
+            <TextView
+                android:id="@+id/tv_desc"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Real đã thua đậm trong trận siêu kinh điển trên sân Barca. Đội trưởng Ramos không thể nuốt trôi tỷ số 1-5 và thái độ thi đấu của đồng đội."
+                android:lines="3"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_12sdp"
+
+                />
+
+        </LinearLayout>
+        
+    </RelativeLayout>
+
+</LinearLayout>
