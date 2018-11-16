@@ -1,20 +1,20 @@
-#APP �?C B�O
-**M� T?**: 
->App du?c x�y d?ng ch?y tr�n ?ng d?ng Android. Ta c� th? lu?t v� xem c�c b�i b�o m?i nh?t du?c dang t?i th�ng qua
-h? th?ng backend du?c x�y d?ng b?ng ng�n ng? PHP. App c� giao di?n don gi?n, d? d�ng v� g?n gui.
-C�NG C? V� C�NG NGH? S? D?NG:
-+ Android Studio 3.2.0
-+ Genymotion 
-+ Netbeans s? d?ng ng�n ng? PHP 
-+ XAMPP
-+ MySQL 
-+ Medoo
-+ Okhttp
-M�I TRU?NG C�I �?T:
-- H? di?u h�nh Windows t? 7 tr? v? sau, phi�n b?n 32/64 bit.
-- Ph?n m?m gi? l?p Sever XAMPP
-- JDK 8.0 tr? l�n
-Th�ng tin Sinh vi�n: 
-- Nguy?n Van H?i - 16520456
-- L� Mai Van Kh�nh - 16520580
-- Nguy?n Trung Nguy�n - 16520848
+APP ĐỌC BÁO
+MÔ TẢ: 
+App được xây dựng chạy trên ứng dụng Android. Ta có thể lướt và xem các bài báo mới nhất được đăng tải thông qua
+hệ thống backend được xây dựng bằng ngôn ngữ PHP. App có giao diện đơn giản, dễ dàng và gần gũi.
+CÔNG CỤ VÀ CÔNG NGHỆ SỬ DỤNG:
+- Android Studio 3.2.0
+- Genymotion 
+- Netbeans sử dụng ngôn ngữ PHP 
+- XAMPP
+- MySQL 
+- Medoo
+- Okhttp
+MÔI TRƯỜNG CÀI ĐẶT:
+- Hệ điều hành Windows từ 7 trở về sau, phiên bản 32/64 bit.
+- Phần mềm giả lập Sever XAMPP
+- JDK 8.0 trở lên
+Thông tin Sinh viên: 
+- Nguyễn Văn Hội - 16520456
+- Lê Mai Văn Khánh - 16520580
+- Nguyễn Trung Nguyên - 16520848
