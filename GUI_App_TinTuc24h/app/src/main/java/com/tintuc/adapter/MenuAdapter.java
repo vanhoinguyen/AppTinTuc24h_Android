@@ -27,17 +27,18 @@ public class MenuAdapter extends RecyclerView.Adapter {
 
     @NonNull
     @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
         LayoutInflater layoutInflater=LayoutInflater.from(viewGroup.getContext());
         View v = layoutInflater.inflate(R.layout.item_menu,null);
         return new MenuViewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull final RecyclerView.ViewHolder holder, final int i) {
-        final MenuViewHolder menuViewHolder =(MenuViewHolder) holder;
+    public void onBindViewHolder(@NonNull final RecyclerView.ViewHolder holder, final int position) {
 
-        final MenuEntity menuEntity = menuEntities.get(i);
+        final MenuViewHolder menuViewHolder =(MenuViewHolder) holder;
+        final MenuEntity menuEntity = menuEntities.get(position);
+
         String title=menuEntity.getTitle();
         menuViewHolder.tvMenu.setText(title);
 
@@ -50,20 +51,19 @@ public class MenuAdapter extends RecyclerView.Adapter {
             menuViewHolder.rlItemMenu.setBackgroundResource(android.R.color.white);
         }
 
-
-
         menuViewHolder.rlItemMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(listener != null)
                 {
-                    listener.onItemClickListener(menuEntity,i,menuViewHolder);
+                    listener.onItemClickListener(menuEntity,position,menuViewHolder);
                 }
             }
         });
     }
 
     private class MenuViewHolder extends RecyclerView.ViewHolder{
+
         RelativeLayout rlItemMenu;
         TextView tvMenu;
 

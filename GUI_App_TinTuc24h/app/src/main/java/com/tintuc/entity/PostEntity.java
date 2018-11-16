@@ -6,14 +6,6 @@ import java.io.Serializable;
 
 public class PostEntity implements Serializable {
 
-//    {
-//        "post_id": "7",
-//            "post_title": "Hello",
-//            "post_desc": "Hello",
-//            "post_thumb": "Hello",
-//            "catelory_id": "2"
-//    },
-
     private int id;
     private String title;
     private String desc;

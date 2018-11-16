@@ -71,14 +71,45 @@ public class MainActivity extends AppCompatActivity {
         menuKinhTe.setId(3);
         menuKinhTe.setTitle("Kinh tế");
 
-        MenuEntity menuChinhTri = new MenuEntity();
-        menuChinhTri.setId(4);
-        menuChinhTri.setTitle("Chính trị");
+        MenuEntity menuPhapLuat = new MenuEntity();
+        menuPhapLuat.setId(4);
+        menuPhapLuat.setTitle("Pháp luật");
+
+        MenuEntity menuCongNghe = new MenuEntity();
+        menuCongNghe.setId(5);
+        menuCongNghe.setTitle("Công nghệ");
+
+        MenuEntity menuAmNhac = new MenuEntity();
+        menuAmNhac.setId(6);
+        menuAmNhac.setTitle("Âm nhạc");
+
+        MenuEntity menuGiaoDuc = new MenuEntity();
+        menuGiaoDuc.setId(7);
+        menuGiaoDuc.setTitle("Giáo dục");
+
+        MenuEntity menuThoiTrang = new MenuEntity();
+        menuThoiTrang.setId(8);
+        menuThoiTrang.setTitle("Thời trang");
+
+        MenuEntity menuSucKhoe = new MenuEntity();
+        menuSucKhoe.setId(9);
+        menuSucKhoe.setTitle("Sức khỏe");
+
+        MenuEntity menuDuLich = new MenuEntity();
+        menuDuLich.setId(10);
+        menuDuLich.setTitle("Du lịch");
 
         menuEntities.add(menuThoiSu);
         menuEntities.add(menuTheThao);
         menuEntities.add(menuKinhTe);
-        menuEntities.add(menuChinhTri);
+        menuEntities.add(menuPhapLuat);
+        menuEntities.add(menuCongNghe);
+        menuEntities.add(menuAmNhac);
+        menuEntities.add(menuGiaoDuc);
+        menuEntities.add(menuThoiTrang);
+        menuEntities.add(menuSucKhoe);
+        menuEntities.add(menuDuLich);
+
 
         imgMenu = (ImageView) findViewById(R.id.img_menu);
         tvTitle = (TextView) findViewById(R.id.tv_title);

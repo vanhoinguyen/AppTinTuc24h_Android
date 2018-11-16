@@ -22,7 +22,6 @@ public class PostAdapter extends RecyclerView.Adapter {
     static final int TYPE_ITEM_LOAD_MORE = 1 ;
 
     private List<PostEntity> postEntities;
-
     private AdapterListener listener;
 
     public PostAdapter(List<PostEntity> postEntities,AdapterListener listener)
@@ -34,35 +33,37 @@ public class PostAdapter extends RecyclerView.Adapter {
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
-        if(viewType == TYPE_ITEM_NORMAL) {
-            LayoutInflater layoutInflater = LayoutInflater.from(viewGroup.getContext());
-            View v = layoutInflater.inflate(R.layout.item_post, null);
-            return new PostViewHolder(v);
+
+        if(viewType == TYPE_ITEM_NORMAL)
+        {
+            View v=LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_post,null);
+            PostViewHolder postViewHolder =new PostViewHolder(v);
+            return postViewHolder;
         }
-        View v=LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_load_more,null);
-        LoadMoreViewHolder loadMoreViewHolder=new LoadMoreViewHolder(v);
-        return loadMoreViewHolder;
+
+            View v=LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_load_more,null);
+            LoadMoreViewHolder loadMoreViewHolder=new LoadMoreViewHolder(v);
+            return loadMoreViewHolder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, final int i) {
+    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, final int position) {
 
         if(holder instanceof PostViewHolder)
         {
-            final PostEntity postEntity =postEntities.get(i);
+            final PostEntity postEntity =postEntities.get(position);
             final PostViewHolder postViewHolder=(PostViewHolder) holder;
             postViewHolder.tvTitle.setText(postEntity.getTitle());
             postViewHolder.tvDesc.setText(postEntity.getDesc());
 
             Glide.with(postViewHolder.imgThumb.getContext()).load(postEntity.getThumb()).into(postViewHolder.imgThumb);
 
-
             postViewHolder.rlPost.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     if(listener != null)
                     {
-                        listener.onItemClickListener(postEntity,i,postViewHolder);
+                        listener.onItemClickListener(postEntity,position,postViewHolder);
                     }
                 }
             });
@@ -75,7 +76,7 @@ public class PostAdapter extends RecyclerView.Adapter {
                 public void onClick(View v) {
                     if(listener != null)
                     {
-                        listener.onItemClickListener(null,i,loadMoreViewHolder);
+                        listener.onItemClickListener(null,position,loadMoreViewHolder);
                     }
                 }
             });
@@ -85,12 +86,10 @@ public class PostAdapter extends RecyclerView.Adapter {
     }
 
     private class PostViewHolder extends RecyclerView.ViewHolder{
-
         RelativeLayout rlPost;
         ImageView imgThumb;
         TextView tvTitle;
         TextView tvDesc;
-
 
         public PostViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -103,13 +102,11 @@ public class PostAdapter extends RecyclerView.Adapter {
 
     private class LoadMoreViewHolder extends RecyclerView.ViewHolder
     {
-
         Button btnLoadMore;
 
         public LoadMoreViewHolder(@NonNull View itemView) {
             super(itemView);
             btnLoadMore=(Button) itemView.findViewById(R.id.btn_load_more);
-
         }
     }
 

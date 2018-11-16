@@ -11,31 +11,6 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 
 public class NewsApi {
-    public static void apiEx(Context ctx, HttpCallBack httpCallBack)
-    {
-        BaseOkHttp baseOkHttp =new BaseOkHttp.Builder()
-                .setHttpCallBack(httpCallBack)
-                .setContext(ctx)
-                .setWantShowDialog(true)
-                .setWantDialogCancelabel(true)
-                .setTitle(".....")
-                .setMessage("Loading ... ")
-                .build();
-
-
-
-
-
-        OkHttpClient okHttpClient=BaseOkHttp.getOkHttpClient();
-
-        Request request = new Request.Builder()
-                .url(Define.API_EXAMPLE)
-                .build();
-
-        okHttpClient.newCall(request).enqueue(baseOkHttp);
-
-    }
-
     public static void getListPost(Context ctx,int cateloryId, int limit, int offset,  HttpCallBack httpCallBack)
     {
         BaseOkHttp baseOkHttp =new BaseOkHttp.Builder()
