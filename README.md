@@ -1,6 +1,6 @@
 ﻿# APP ĐỌC BÁO
  
- ** Đồ án cuối học kì môn Nhập môn lập trình ứng dụng di động **
+  Đồ án cuối học kì môn Nhập môn lập trình ứng dụng di động 
  
 _**MÔ TẢ**_: 
 >App được xây dựng chạy trên ứng dụng Android. Ta có thể lướt và xem các bài báo mới nhất được đăng tải thông qua
