@@ -1,4 +1,4 @@
-#APP ĐỌC BÁO
+﻿#APP ĐỌC BÁO
 _**MÔ TẢ**_: 
 >App được xây dựng chạy trên ứng dụng Android. Ta có thể lướt và xem các bài báo mới nhất được đăng tải thông qua
 hệ thống backend được xây dựng bằng ngôn ngữ PHP. App có giao diện đơn giản, dễ dàng và gần gũi.
